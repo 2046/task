@@ -1,0 +1,30 @@
+<div class="overlay">
+    <div class="popup">
+        <textarea v-focus class="text" v-model="todo.content" placeholder="typing todo content..."></textarea>
+        <div class="operate">
+            <div class="done" @click="done">
+                <Icon class="done__icon" name="send"></Icon>
+            </div>
+            <div class="cancel" @click="updateTodoEditing(false)">Cancel</div>
+            <div class="date">
+                <Icon class="date__icon" name="date"></Icon>
+                <div class="date__input">
+                    <input type="date" v-model="todo.time" :min="minTime">
+                </div>
+            </div>
+            <div class="tag" v-if="tags.length">
+                <Icon class="tag__icon" name="tag" @click.native.stop="toggleTags"></Icon>
+                <transition name="dropdown">
+                    <div class="dropdown" v-if="showTags">
+                        <div class="dropdown__arrow"></div>
+                        <div class="dropdown__inner">
+                            <div class="dropdown__item" :class="{ 'dropdown__item--selected': item.id === todo.tagId }" v-for="item of tags" :key="item.id">
+                                <p class="text-overflow" @click="todo.tagId = item.id">{{ item.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </transition>
+            </div>
+        </div>
+    </div>
+</div>

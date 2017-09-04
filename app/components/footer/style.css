@@ -1,0 +1,90 @@
+footer {
+    position: relative;
+    display: flex;
+    height: 94px;
+    min-height: 94px;
+    padding: 0 38px;
+    align-items: center;
+}
+footer:before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: ' ';
+    background-color: #dcdcdc;
+}
+.tags {
+    width: 500px;
+    padding: 5px 0;
+    overflow-y: hidden;
+}
+.tags::-webkit-scrollbar {
+    display: none;
+}
+.tag__list {
+    float: left;
+    height: 28px;
+    white-space: nowrap;
+}
+.tag-list-enter,
+.tag-list-leave-to {
+    opacity: 0;
+    transform: scale(0);
+}
+.tag__item {
+    position: relative;
+    display: inline-block;
+    height: 28px;
+    padding: 0 14px;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 28px;
+    user-select: none;
+    border-radius: 26px;
+    transition: all 0.6s;
+}
+.tag-list-leave-active {
+    position: absolute;
+}
+.tag__add {
+    position: absolute;
+}
+.icon__add {
+    width: 38px;
+    height: 38px;
+    fill: #d9d9d9;
+    cursor: pointer;
+}
+.icon__add:hover {
+    fill: #aeaeae;
+}
+.tag__close {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: all 0.6s;
+    background-color: #fe3583;
+}
+.tag__item:hover .tag__close {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.icon__close {
+    width: 10px;
+    height: 10px;
+    fill: #fff;
+    margin: 1px 0 0 1px;
+    vertical-align: top;
+}

@@ -1,0 +1,17 @@
+<div class="overlay">
+    <div class="popup">
+        <input v-focus class="text" v-model="tag.text" placeholder="typing tag content..." />
+        <div class="operate">
+            <div class="done" @click="done">
+                <Icon class="done__icon" name="send"></Icon>
+            </div>
+            <div class="cancel" @click="updateTagEditing(false)">Cancel</div>
+            <div class="color">
+                <Icon class="color__icon" name="color"></Icon>
+                <div class="color__input">
+                    <input type="color" v-model="tag.color">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

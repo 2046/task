@@ -1,0 +1,15 @@
+<footer>
+    <div class="tags">
+        <transition-group class="tag__list" ref="tagList" name="tag-list" tag="ul" @enter="animation" @leave="animation">
+            <li class="tag__item" v-for="tag of tags" :key="tag.id" :style="{ 'background-color': tag.color }" @click="selectTag(tag)">
+                <div class="tag__close" @click.stop="deleteTag(tag.id)">
+                    <Icon class="icon__close" name="close"></Icon>
+                </div>
+                {{ tag.text }}
+            </li>
+        </transition-group>
+    </div>
+    <div class="tag__add" :style="{ 'top': vo.coord.y + 'px', 'left': vo.coord.x + 'px' }" ref="addIcon">
+        <Icon class="icon__add" name="add" @click.native.stop="updateTagEditing(true)"></Icon>
+    </div>
+</footer>

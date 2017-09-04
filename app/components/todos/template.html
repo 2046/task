@@ -1,0 +1,18 @@
+<section class="todos">
+    <transition-group name="todos" tag="ul">
+        <li class="todo" v-for="(item, index) of todos" :key="item.id" @click="edit(item)">
+            <div class="tag" :style="{ 'background-color': item.tag.color }" v-if="item.tag"></div>
+            <div class="checkbox" :class="{ 'checkbox--checked': item.completed }" @click.stop="toggleTodo(item)">
+                <Icon class="checkbox__icon" name="checkbox__checked"></Icon>
+            </div>
+            <div class="text text-overflow">{{ item.content }}</div>
+            <div class="time">
+                <Icon class="time__icon" name="time"></Icon>
+                <span class="time__text">{{ item.time }}</span>
+            </div>
+            <div class="delete" @click.stop="deleteTodo(item)">
+                <Icon class="delete__icon" name="remove"></Icon>
+            </div>
+        </li>
+    </transition-group>
+</section>

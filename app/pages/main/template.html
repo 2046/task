@@ -1,0 +1,14 @@
+<main>
+    <section class="main">
+        <Headers></Headers>
+        <Search></Search>
+        <Todos></Todos>
+        <Footers></Footers>
+    </section>
+    <transition name="editor">
+        <TodoEditor v-if="todoEditing"></TodoEditor>
+    </transition>
+    <transition name="editor">
+        <TagEditor v-if="tagEditing"></TagEditor>
+    </transition>
+</main>

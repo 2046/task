@@ -1,0 +1,36 @@
+.search {
+    display: flex;
+    height: 50px;
+    min-height: 50px;
+    padding: 0 38px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5fdff;
+    border-bottom: 1px solid #dddfde;
+}
+h2 {
+    font-size: 14px;
+    color: #828284;
+    line-height: 14px;
+    font-weight: 500;
+    user-select: none;
+}
+input {
+    flex: 1;
+    margin: 0 5px;
+    font-size: 16px;
+    color: #828284;
+    line-height: 24px;
+    border: 0 none;
+    background-color: transparent;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    fill: #828282;
+    cursor: pointer;
+}
+.icon:hover {
+    fill: #aeaeae;
+}

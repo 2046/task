@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.editor-enter,
+.editor-leave-to {
+    opacity: 0;
+    transform: translate(0, -100%);    
+}
+.editor-enter-active,
+.editor-leave-active {
+    transition: transform 0.5s, opacity 0.5s;
+}
