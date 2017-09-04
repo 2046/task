@@ -1,6 +1,6 @@
 # Task Manager
 
-![image](https://ws2.sinaimg.cn/large/006tNc79ly1fj7oumr189j31040swmyu.jpg)
+![image](https://ws3.sinaimg.cn/large/006tNc79ly1fj7qea37jij31040sw0u4.jpg)
 
 ### License
 
