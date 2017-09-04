@@ -1,13 +1,13 @@
 {
-  "name": "electron",
+  "name": "task",
   "version": "1.0.0",
   "main": "./dist/main.js",
-  "description": "Electron app",
+  "description": "Task manager desktop app",
   "author": {
-    "name": "electron",
-    "email": "electron@github.com"
+    "name": "2046",
+    "email": "g@ggg.gd"
   },
-  "homepage": "https://electron.atom.io",
+  "homepage": "https://github.com/2046/task",
   "scripts": {
     "start": "./node_modules/.bin/cross-env NODE_ENV=develop node ./conf/bootstrap.js",
     "build": "rm -rf assets && npm run build:main && npm run build:renderer && ./node_modules/.bin/build -wm --x64 --ia32 && rm -fr dist",
@@ -17,7 +17,7 @@
   },
   "productName": "Task Manager",
   "build": {
-    "appId": "org.electron.app",
+    "appId": "org.task.app",
     "files": [
       "dist/**/*"
     ],
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/electron/electron.git"
+    "url": "git://github.com/2046/task.git"
   },
   "devDependencies": {
     "babel-core": "6.25.0",
