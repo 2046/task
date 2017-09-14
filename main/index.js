@@ -16,7 +16,7 @@ function createWindow() {
         installExtension()
         win.webContents.openDevTools()
     }
-
+    
     win.loadURL(url)
     closeResizeable(win)
     closeMaximizable(win)

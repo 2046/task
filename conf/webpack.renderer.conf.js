@@ -47,6 +47,14 @@ let config = {
                 loader: 'babel-loader'
             }
         }, {
+            test: /\FileAsync.js|\pify\/index.js$/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['env']
+                }
+            }
+        }, {
             test: /\.css$/,
             use: isDev ? ['style-loader', 'css-loader'] : ExtractTextPlugin.extract({
                 use: 'css-loader',
@@ -110,11 +118,11 @@ if (isProd) {
                     NODE_ENV: '"production"'
                 }
             }),
-            // new webpack.optimize.UglifyJsPlugin({
-            //     compress: {
-            //         warnings: false
-            //     }
-            // }),
+            new webpack.optimize.UglifyJsPlugin({
+                compress: {
+                    warnings: false
+                }
+            }),
             new ExtractTextPlugin('css/[name].[hash:7].css'),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendors',
